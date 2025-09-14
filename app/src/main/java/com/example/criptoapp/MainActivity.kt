@@ -19,8 +19,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.criptoapp.Components.CoinItemComponent
+import com.example.criptoapp.Components.CoinsList
 import com.example.criptoapp.Components.NotificationsBox
 import com.example.criptoapp.Components.TagsLine
+import com.example.criptoapp.Items.CriptoCoinItem
 import com.example.criptoapp.Items.NotificationItem
 import com.example.criptoapp.ui.theme.CriptoAppTheme
 
@@ -50,6 +52,59 @@ fun MainView(modifier: Modifier = Modifier){
         NotificationItem("Nuevo depósito recibido", "$12.75")
     )
 
+    val coins = listOf(
+        CriptoCoinItem(
+            image = "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/btc.png",
+            Name = "Bitcoin",
+            Price = "$109,797.37"
+        ),
+        CriptoCoinItem(
+            image = "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/eth.png",
+            Name = "Ethereum",
+            Price = "$4,321.21"
+        ),
+        CriptoCoinItem(
+            image = "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/usdt.png",
+            Name = "Tether",
+            Price = "$1.0000"
+        ),
+        CriptoCoinItem(
+            image = "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/xrp.png",
+            Name = "XRP",
+            Price = "$2.8100"
+        ),
+        CriptoCoinItem(
+            image = "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/bnb.png",
+            Name = "BNB",
+            Price = "$845.0000"
+        ),
+        CriptoCoinItem(
+            image = "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/sol.png",
+            Name = "Solana",
+            Price = "$201.8500"
+        ),
+        CriptoCoinItem(
+            image = "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/usdc.png",
+            Name = "USDC",
+            Price = "$0.9998"
+        ),
+        CriptoCoinItem(
+            image = "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/doge.png",
+            Name = "Dogecoin",
+            Price = "$0.1320"
+        ),
+        CriptoCoinItem(
+            image = "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/trx.png",
+            Name = "TRON",
+            Price = "$0.0835"
+        ),
+        CriptoCoinItem(
+            image = "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/ada.png",
+            Name = "Cardano",
+            Price = "$0.25"
+        )
+    )
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -69,7 +124,7 @@ fun MainView(modifier: Modifier = Modifier){
         }
 
         TagsLine()
-        CoinItemComponent()
+        CoinsList(coins)
 
     }
 }

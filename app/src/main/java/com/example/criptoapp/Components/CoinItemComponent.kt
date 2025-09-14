@@ -13,35 +13,42 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.criptoapp.Items.CriptoCoinItem
+import coil.compose.AsyncImage
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
+
 
 @Composable
-fun CoinItemComponent(coin: CriptoCoinItem,number : Int){
+fun CoinItemComponent(coin: CriptoCoinItem, number: Int) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(20.dp))
-            .background(Color(0Xff151B2E))
-            .padding(top = 10.dp, bottom = 10.dp, start = 5.dp)
-
+            .background(Color(0xFF151B2E))
+            .padding(top = 15.dp,  start = 5.dp, end = 10.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         Text(
             text = "$number",
-            modifier = Modifier.padding(end = 5.dp),
             style = MaterialTheme.typography.bodyMedium,
             color = Color.White
         )
-        Text(
-            text = coin.image,
-            modifier = Modifier.weight(1f),
-            style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+
+        AsyncImage(
+            model = coin.image,
+            contentDescription = coin.Name,
+            modifier = Modifier
+                .size(32.dp)
+                .clip(CircleShape)
         )
+
         Text(
             text = coin.Name,
             modifier = Modifier.weight(3f),
             style = MaterialTheme.typography.bodyMedium,
             color = Color.White
         )
+
         Text(
             text = coin.Price,
             modifier = Modifier.weight(2f),
