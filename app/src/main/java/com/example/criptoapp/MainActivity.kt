@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.criptoapp.Components.CoinItemComponent
 import com.example.criptoapp.Components.NotificationsBox
 import com.example.criptoapp.Components.TagsLine
 import com.example.criptoapp.Items.NotificationItem
@@ -68,6 +69,7 @@ fun MainView(modifier: Modifier = Modifier){
         }
 
         TagsLine()
+        CoinItemComponent()
 
     }
 }
