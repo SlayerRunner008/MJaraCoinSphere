@@ -21,19 +21,19 @@ fun TagsLine() {
             text = "#",
             modifier = Modifier.padding(end = 5.dp),
             style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+            color = Color(0xFF9AA3B2)
         )
         Text(
             text = "Name",
             modifier = Modifier.weight(2f),
             style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+            color = Color(0xFF9AA3B2)
         )
         Text(
             text = "Price",
             modifier = Modifier.weight(1f),
             style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+            color = Color(0xFF9AA3B2)
             )
     }
 }

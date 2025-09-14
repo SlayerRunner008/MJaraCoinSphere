@@ -36,14 +36,15 @@ fun NotificationsBox(notification: NotificationItem) {
             Text(
                 text = notification.message,
                 style = MaterialTheme.typography.bodySmall,
-                color = Color.White,
+                color = Color(0xFF9AA3B2),
                 modifier = Modifier
                     .padding(bottom = 5.dp)
+
             )
             Text(
                 text = notification.price,
                 style = MaterialTheme.typography.bodyLarge,
-                color = Color.White,
+                color = Color(0xFFE8ECF8),
                 fontWeight = FontWeight.Bold
             )
         }

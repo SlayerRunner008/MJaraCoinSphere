@@ -31,7 +31,7 @@ fun CoinItemComponent(coin: CriptoCoinItem, number: Int) {
         Text(
             text = "$number",
             style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+            color = Color(0xFF9AA3B2)
         )
 
         AsyncImage(
@@ -46,14 +46,14 @@ fun CoinItemComponent(coin: CriptoCoinItem, number: Int) {
             text = coin.Name,
             modifier = Modifier.weight(3f),
             style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+            color = Color(0xFFE8ECF8)
         )
 
         Text(
             text = coin.Price,
             modifier = Modifier.weight(2f),
             style = MaterialTheme.typography.bodyMedium,
-            color = Color.White
+            color = Color(0xFFE8ECF8)
         )
     }
 }
